@@ -16,10 +16,20 @@
 " Better copy & paste
 " When you want to paste large blocks of code into vim, press F2 before you
 " paste. At the bottom you should see ``-- INSERT (paste) --``.
-
 "" set pastetoggle=<F2>
 "" set clipboard=unnamed
 
+" On Mac OS X and Windows, the * and + registers both point to the system clipboard so unnamed and unnamedplus have the same effect: the unnamed register is synchronized with the system clipboard.
+" On Linux, you have essentially two clipboards: one is pretty much the same as in the other OSes (CtrlC and CtrlV in other programs, mapped to register + in Vim), the other is the "selection" clipboard (mapped to register * in Vim).
+" Using only unnamedplus on Linux, Windows and Mac OS X allows you to:
+
+" CtrlC in other programs and put in Vim with p on all three platforms, yank in Vim with y and CtrlV in other programs on all three platforms.
+" If you also want to use Linux's "selection" clipboard, you will also need unnamed.
+" Here is a cross-platform value:
+"" set clipboard^=unnamed,unnamedplus
+" Reference:
+"" :h 'clipboard'
+" (and follow the tags)
 
 " Mouse and backspace
 "" set mouse=a  " on OSX press ALT and click
@@ -208,6 +218,6 @@
 " mkdir -p ~/.vim/ftplugin
 " wget -O ~/.vim/ftplugin/python_editing.vim http://www.vim.org/scripts/download_script.php?src_id=5492
 "" set nofoldenable
-Status API Training Shop Blog About
-© 2014 GitHub, Inc. Terms Privacy Security Contact
+
+
 
