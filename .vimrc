@@ -2,16 +2,14 @@
 " H. Rene Trevino Jr.
 " .vimrc
 
-
 " ============================================
 " Note to myself:
 " DO NOT USE <C-z> FOR SAVING WHEN PRESENTING!
+" on linux, CTRL-Z in vi/vim/gvim mean escape to the console, or put this in the background. you then do whatever you want on the console and type fg (foreground) to bring you back into vim edit session. 
 " ============================================
-
 
 " Automatic reloading of .vimrc
 "" autocmd! bufwritepost .vimrc source %
-
 
 " Better copy & paste
 " When you want to paste large blocks of code into vim, press F2 before you
